@@ -1,0 +1,24 @@
+operators = ["+", "-", "*", "/"]
+
+while True:
+    num_1 = float(input("Enter your first number: "))
+    num_2 = float(input("Enter your second number: "))
+    user = input(f"Choose an operator {operators} or type 'exit' to quit: ")
+
+    if user == "exit":
+        print("Goodbye!")
+        break
+
+    if user == "+":
+        print("Result:", num_1 + num_2)
+    elif user == "-":
+        print("Result:", num_1 - num_2)
+    elif user == "*":
+        print("Result:", num_1 * num_2)
+    elif user == "/":
+        if num_2 == 0:
+            print("Error: Division by zero!")
+        else:
+            print("Result:", num_1 / num_2)
+    else:
+        print("Invalid operator! Please choose one from", operators)
